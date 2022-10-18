@@ -1,0 +1,165 @@
+<html>
+	<!-- BEGIN HEAD -->
+	<head>
+		<meta charset="utf-8"/>
+		<title>Alfiyandy Hariansyah</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<meta content="Aircraft Design, Optimization, Aerospace, Aeronautical" name="description"/>
+		<meta content="Alfiyandy Hariansyah" name="author"/>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+		<link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container">
+				<nav class="navbar navbar-default navbar-dark navbar-fixed-top navbar-custom">
+					<nav class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Alfiyandy Hariansyah</a>
+					</nav>
+					<div id="main-menu" class="collapse navbar-collapse navbar-right" style="padding-right:1em;">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="publications.html">Publications</a></li>
+							<li><a href="files/cv_alfi.pdf">CV</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Projects -->
+		<div class="content-md container">
+			
+			<h2 id="projects">Project Highlights <a style="color:#333;" href="https://github.com/alfiyandyhr/"><img src="img/icons/github.png" width="27" height="27"></a></h2><br><br>
+			
+			<h4>Research projects</h4><br><br>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/crm_opt.gif"><img src="img/projects/crm_opt.gif" class="img-responsive center-block fig-margin"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">Aerodynamic Shape Optimization of CRM Wing</font></strong></p>
+					NASA developed <a href="https://commonresearchmodel.larc.nasa.gov/">Common Research Model (CRM)</a> mainly for CFD validation purposes. However, <a href="https://sites.google.com/view/mcgill-computational-aerogroup/adodg">the aerodynamic optimization community</a> has used the CRM's wing-only configuration for testing their optimization methods. I also used this wing model as a baseline to test several optimization methodologies, e.g., a DCGAN-based synthetic wing sampling and CNN-based geometric filtering, which we integrated into our surrogate-based optimization framework (MLP+GA). I performed a lift-constrained drag minimization of the CRM wing with 193 design variables. An optimized design with lower drag than the baseline was obtained while maintaining the same lift and ensuring feasibility.
+					<p align="right">[<a href="files/jsme2022_alfi">Paper</a>]</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/airfoil_opt.png"><img alt="img" src="img/projects/airfoil_opt.png" class="img-responsive center-block fig-margin"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">Multi-Objective Transonic Airfoil Shape Optimization</font></strong></p>
+					The aerodynamic design of the transonic wing is essential since most commercial aircraft today cruise at transonic speeds, near the speed of sound. The aerodynamic characteristics of the wing are strongly affected by the shape of its airfoil selection. Aerodynamic shape optimization of transonic airfoils thus becomes a crucial task to find candidates of shapes with optimum aerodynamic performance. One objective is to minimize drag to reduce fuel consumption at cruise. However, it comes with a trade-off with lift: the induced drag increases in proportion to the square of the lift. This project considers multi-objective optimization to explore the design trade-offs between drag minimization and lift maximization of transonic airfoils.
+					<p align="right">[<a href="https://www.researchgate.net/publication/363653478_An_Artificial_Neural_Network-Assisted_Genetic_Algorithm_with_Application_to_Multi-Objective_Transonic_Airfoil_Shape_Optimization">Paper</a>]</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/zdt3_gif.gif"><img alt="img" src="img/projects/zdt3_gif.gif" class="img-responsive center-block"></a> <a href="img/projects/nn_ga.jpg"><img alt="img" src="img/projects/nn_ga.jpg" class="img-responsive center-block fig-margin" width="100%"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">A Surrogate-Based Optimization Framework using NN and NSGA-II</font></strong></p>
+					Nature-inspired stochastic search techniques such as Evolutionary Algorithms (EAs) are known for their ability to solve complex optimization problems. However, they typically require numerous function evaluations in their search process to find global optimums. This is a drawback if we use EAs in optimization problems with computationally expensive functions. Therefore, surrogate models have been used as cheap approximations to replace these functions. In this project, we propose a dynamically retrained Neural Network (NN)-based surrogate model coupled with a genetic algorithm, NSGA-II, to reduce the number of function evaluations in the optimization process. We have successfully applied the proposed method to some test functions and real-world aerodynamic shape optimization problems. It is also shown that it converges more quickly towards the Pareto-optimal front with fewer function evaluations than a stand-alone NSGA-II in all optimization problems. You can access the code in the GitHub link below, which contains the basic algorithm applied to some benchmark test problems: ZDT1, ZDT2, ZDT3, and OSY.
+					<p align="right">[<a href="https://github.com/alfiyandyhr/nn_ga_benchmark">Code</a>] [<a href="https://www.researchgate.net/publication/363653550_On_the_use_of_a_multilayer_perceptron_based_surrogate_model_in_evolutionary_optimization">Paper</a>]</p>
+				</div>
+			</div>
+
+
+			<br><br><br>
+			<h4>Personal projects</h4><br><br>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/math_model.gif"><img alt="img" src="img/projects/math_model.gif" class="img-responsive center-block fig-margin"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">Batik Pattern Inspiration from the Gray-Scott Model</font></strong></p>
+					As a final project for my graduate class, Mathematical Modeling and Computation, I introduced a new way to create <a href="https://en.wikipedia.org/wiki/Batik">batik</a> patterns from the famous mathematical model called the Gray-Scott (GS) model. The idea is to numerically solve the GS equations and track the pattern as the iteration increases. By varying the equation coefficients, some interesting patterns that are proper for batik motifs can be found at specific iterations. Batik designers can use the selected pattern as a building block that can be repeated to form a batik motif. They can also play around with the parameters to discover new patterns. This code is adapted from <a href="http://www.karlsims.com/rd.html">the Reaction-Diffusion Tutorial by Karl Sims</a>. Instead of performing a 3x3 convolution operation to calculate the Laplacian, I used a 5-point stencil approximation.
+					<p align="right">[<a href="https://github.com/alfiyandyhr/gray_scott_pattern">Code</a>]</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/img_quantization.png"><img alt="img" src="img/projects/img_quantization.png" class="img-responsive center-block fig-margin"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">Image Quantization using K-Means Clustering</font></strong></p>
+					<a href="https://en.wikipedia.org/wiki/Quantization_(image_processing)">Quantization</a> in image processing is a compression technique achieved by compressing a range of values of colors to a single quantum value. In this code, the quantization process is done using the K-Means clustering algorithm, proposed by Stuart Lloyd at Bell Labs in 1957 as a technique for pulse-code modulation, but it was published outside the company in 1982. First, the algorithm randomly chooses <i>K</i> centroids (cluster centers) in the design space. Each instance was then assigned to the closest centroid to form a cluster. Next, the centroids are moved to the means of the instances in the same cluster. Finally, the same procedure is repeated until the centroids no longer move. This code converts the colors in the flower pictures into RGB values, which are then treated as instances by the algorithm. I implemented the code in <a href="https://pytorch.org/">PyTorch</a>.
+					<p align="right">[<a href="https://github.com/alfiyandyhr/image_quantization">Code</a>]</p>
+				</div>
+			</div>
+
+		</div>
+	
+
+
+  		<!-- Footer -->
+		<div id="footer">
+			<footer class="footer">
+				<div class="container footer-container">
+					<center>
+						<ul class="icons">
+							<li>
+								<a href="mailto:alfiyandyhariansyah@gmail.com">
+									<img src="img/icons/email.png" class="importedicon">
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/alfiyandyhr">
+									<img src="img/icons/github.png" class="importedicon">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/alfiyandy-hariansyah/">
+									<img src="img/icons/linkedin.png" class="importedicon">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.researchgate.net/profile/Muhammad_Hariansyah2">
+									<img src="img/icons/researchgate.png" class="importedicon">
+								</a>
+							</li>
+						</ul>
+						<br>
+						© 2022 Alfiyandy Hariansyah
+					</center>
+				</div>
+			</footer>
+		</div>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19720634-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-19720634-1', {
+				'anonymize_ip': true,
+				'client_storage': 'none'
+		  });
+		</script>
+	</body>
+</html>
