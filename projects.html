@@ -53,7 +53,18 @@
 			<h2 id="projects">Project Highlights <a style="color:#333;" href="https://github.com/alfiyandyhr/"><img src="img/icons/github.png" width="27" height="27"></a></h2><br><br>
 			
 			<h4>Research projects</h4><br><br>
-			
+
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="img/projects/deep_learning_airfoil_design.gif"><img src="img/projects/deep_learning_airfoil_design.gif" class="img-responsive center-block fig-margin"></a>
+				</div>
+				<div class="col-sm-8" align="justify">
+					<p><strong><font size="4">Deep Learning Techniques for High-Dimensional Surrogate-Based Aerodynamic Design</font></strong></p>
+					As part of a <a href="http://www.ifs.tohoku.ac.jp/~Boeing/e-index.html">Boeing Higher Education research project</a>, I investigated the applicability of our Surrogate-Based Optimization (SBO) framework to a high-dimensional wing design optimization. However, utilizing SBO to solve highdimensional problems is challenging. The tricky part is to train the surrogate model to achieve sufficient accuracy. Therefore, I proposed deep learning techniques to increase the model's accuracy and accelerate optimization convergence. The first technique utilizes a deep convolutional generative adversarial network (DCGAN)-based sampling to produce synthetic wing designs, which is helpful to sample the design space efficiently, leading to a more accurate initial surrogate model. The second technique uses a convolutional neural network (CNN)-based geometric filtering to efficiently drive the optimizer so that it will not produce abnormal designs that do not add meaningful information to the surrogate model. In other words, the CNN shrinks the design space, leading to a more accurate surrogate model. However, one should conduct further study since this technique sometimes sacrifices the exploratory capability of the optimization, hindering the findings of novel designs.
+					<p align="right">[<a href="https://www.researchgate.net/publication/364331999_Deep_Learning_Techniques_for_High-Dimensional_Surrogate-Based_Aerodynamic_Design">Paper</a>]</p>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="col-sm-4">
 					<a href="img/projects/crm_opt.gif"><img src="img/projects/crm_opt.gif" class="img-responsive center-block fig-margin"></a>
@@ -61,7 +72,7 @@
 				<div class="col-sm-8" align="justify">
 					<p><strong><font size="4">Aerodynamic Shape Optimization of CRM Wing</font></strong></p>
 					NASA developed <a href="https://commonresearchmodel.larc.nasa.gov/">Common Research Model (CRM)</a> mainly for CFD validation purposes. However, <a href="https://sites.google.com/view/mcgill-computational-aerogroup/adodg">the aerodynamic optimization community</a> has used the CRM's wing-only configuration for testing their optimization methods. I also used this wing model as a baseline to test several optimization methodologies, e.g., a DCGAN-based synthetic wing sampling and CNN-based geometric filtering, which we integrated into our surrogate-based optimization framework (MLP+GA). I performed a lift-constrained drag minimization of the CRM wing with 193 design variables. An optimized design with lower drag than the baseline was obtained while maintaining the same lift and ensuring feasibility.
-					<p align="right">[<a href="files/jsme2022_alfi">Paper</a>]</p>
+					<p align="right">[<a href="files/jsme2022_alfi.pdf">Paper</a>]</p>
 				</div>
 			</div>
 
@@ -96,7 +107,7 @@
 				</div>
 				<div class="col-sm-8" align="justify">
 					<p><strong><font size="4">Interactive Web-Based UIUC Airfoil Database Exploration</font></strong></p>
-					As part of my projects during intern at <a href="https://www.tetra-aviation.com/">teTra aviation corp.</a>, I developed an interactive web-based app that allows users to explore <a href="https://m-selig.ae.illinois.edu/ads/coord_database.html">the UIUC Airfoil Database</a>. In this app, I wrote a code to scrap all the airfoils data from the UIUC website and preprocess them. Subsequently, XFOIL was used to automatically analyze the airfoils and produce aerodynamic data. The app is built using Python's Dash and Plotly libraries, providing a user-friendly interface that allows users to simultaneously view airfoil geometry and corresponding aerodynamic data. This app is a valuable tool for designers and researchers alike, providing easy access to a vast amount of airfoil data and enabling the exploration of the design space in a user-friendly way.
+					As part of my projects during intern at <a href="https://www.tetra-aviation.com/">teTra aviation corp.</a>, I developed an interactive web-based app that allows users to explore <a href="https://m-selig.ae.illinois.edu/ads/coord_database.html">the UIUC Airfoil Database</a>. In this app, I wrote a code to scrap all the airfoils data from the UIUC website and preprocess them. Subsequently, <a href="https://web.mit.edu/drela/Public/web/xfoil/">XFOIL</a> was used to automatically analyze the airfoils and produce aerodynamic data. The app is built using Python's Dash and Plotly libraries, providing a user-friendly interface that allows users to simultaneously view airfoil geometry and corresponding aerodynamic data. This app is a valuable tool for designers and researchers alike, providing easy access to a vast amount of airfoil data and enabling the exploration of the design space in a user-friendly way.
 					<p align="right">[<a href="https://github.com/alfiyandyhr/uiuc_airfoil_exploration">Code</a>] [<a href="https://uiuc-airfoil-exploration-by-alfi.onrender.com/">App</a>]</p>
 				</div>
 			</div>
